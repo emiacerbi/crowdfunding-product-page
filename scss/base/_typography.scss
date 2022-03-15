@@ -30,6 +30,15 @@ body {
             font-weight: 500;
         }
 
+        &__bookmark {
+
+            &:hover {
+                color: var(--dark-gray);
+                font-weight: 500;
+            }
+
+        }
+
     }
 
     &__info {
@@ -94,3 +103,53 @@ body {
     }
 }
 
+
+@media (min-width: 500px) {
+
+    .main {
+
+        &__header {
+
+            &__title {
+                font-size: 1.75rem;
+            }
+
+            &__text {
+                font-size: 1rem;
+            }
+
+            &__bookmark {
+
+
+                &::after {
+   
+                }
+            }
+        }
+
+        &__info {
+        }
+
+        &__about {
+
+            padding: 3.125rem 3rem;
+
+            &__text {
+                font-size: 1rem;
+            }
+
+            &__reward {
+
+                &__title {
+                    font-size: 1.1rem;
+                }
+                
+                &__text {
+                    
+                    font-size: 1rem;
+                }
+            }
+        }
+
+    }
+}

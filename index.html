@@ -18,8 +18,10 @@
 <body>
 
 <header class="header">
-  <img src="/images/logo.svg" alt="" class="header__logo">
-  <img src="/images/icon-hamburger.svg" alt="" class="header__ham">
+  <div class="header__container">
+    <img src="/images/logo.svg" alt="" class="header__logo">
+    <img src="/images/icon-hamburger.svg" alt="" class="header__ham">
+  </div>
 </header>
 
 <main class="main">
@@ -32,17 +34,21 @@
 
     <div class="main__header__flex">
       <button class="main__header__button">Back this project</button>
-      <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" class="main__header__bookmark">
-        <g fill="none" fill-rule="evenodd">
-          <circle fill="#2F2F2F" cx="28" cy="28" r="28"/>
-          <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
-        </g>
-      </svg>
+
+      <div class="main__header__bookmark">
+        <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg" class="main__header__bookmark__svg">
+          <g fill="none" fill-rule="evenodd">
+            <circle fill="#2F2F2F" cx="28" cy="28" r="28"/>
+            <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
+          </g>
+        </svg>
+      </div>
     </div>
   </div>
 
   <!-- Main info -->
   <div class="main__info">
+
     <div class="main__info__card">
       <p class="main__info__card__num">$89,914</p>
       <span class="main__info__card__span">of $100,000 backed</span>
@@ -61,6 +67,7 @@
     <div class="main__info__progress">
       <div class="main__info__progress__percent"></div>
     </div>
+
   </div>
 
   <div class="main__about">
@@ -82,7 +89,7 @@
 
       <p class="main__about__reward__text"> You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
         you’ll be added to a special Backer member list.
-        101 left</p>
+      </p>
 
       <div class="main__about__reward__flex">
         <p class="main__about__reward__num">101</p>

@@ -103,6 +103,10 @@ body {
   color: white;
   font-weight: 500;
 }
+.main__header__bookmark:hover {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
 .main__info__card__num {
   font-size: 2rem;
   font-weight: 700;
@@ -144,6 +148,26 @@ body {
   color: white;
 }
 
+@media (min-width: 500px) {
+  .main__header__title {
+    font-size: 1.75rem;
+  }
+  .main__header__text {
+    font-size: 1rem;
+  }
+  .main__about {
+    padding: 3.125rem 3rem;
+  }
+  .main__about__text {
+    font-size: 1rem;
+  }
+  .main__about__reward__title {
+    font-size: 1.1rem;
+  }
+  .main__about__reward__text {
+    font-size: 1rem;
+  }
+}
 /* ==========
     Header 
 ========== */
@@ -151,10 +175,14 @@ body {
   height: 300px;
   background-image: url(/images/image-hero-mobile.jpg);
   background-size: contain;
+  padding: 2rem 1.5rem;
+}
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem 1.5rem;
+  max-width: 730px;
+  margin: 0 auto;
 }
 .header__ham {
   cursor: pointer;
@@ -172,6 +200,8 @@ body {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border-radius: 0.5rem;
   padding: 3rem 1.5rem 2rem;
+  max-width: 730px;
+  margin: 0 auto;
   margin-top: -5.5rem;
   position: relative;
   text-align: center;
@@ -193,13 +223,14 @@ body {
 .main__header__flex {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
   margin-top: 1.5rem;
 }
 .main__header__button {
   background-color: var(--moderate-cyan);
   border: none;
   padding: 0.8rem 2.4rem 1rem;
+  width: min(77.5%, 200px);
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -208,12 +239,15 @@ body {
 }
 .main__header__bookmark {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main__header__bookmark:hover path {
-  fill: white;
+.main__header__bookmark:hover svg path {
+  fill: lightgray;
 }
-.main__header__bookmark:hover circle {
-  fill: var(--dark-cyan);
+.main__header__bookmark:hover svg circle {
+  fill: #6e6e6e;
 }
 .main__info {
   margin-top: 2rem;
@@ -221,10 +255,8 @@ body {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border-radius: 0.5rem;
   padding: 1rem 2rem 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
+  max-width: 730px;
 }
 .main__info__card {
   position: relative;
@@ -259,8 +291,11 @@ body {
   border-radius: 2rem;
 }
 .main__about {
+  max-width: 730px;
   border-radius: 0.5rem;
   margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   background-color: white;
   padding: 2rem 1.5rem;
@@ -301,6 +336,89 @@ body {
 }
 .main__about .out {
   opacity: 0.5;
+}
+
+@media (min-width: 500px) {
+  .main__header__title {
+    max-width: 100%;
+  }
+  .main__header__bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 2rem;
+  }
+  .main__header__bookmark::after {
+    content: "Bookmark";
+    width: 120px;
+    height: 100%;
+    padding: 1rem;
+    padding-left: 0;
+    z-index: 1;
+  }
+  .main__info {
+    padding: 3rem;
+  }
+  .main__about {
+    padding: 3.125rem 3rem;
+  }
+  .main__about__text {
+    margin-top: 2rem;
+  }
+  .main__about__reward {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 2rem;
+  }
+  .main__about__reward__text {
+    grid-column: span 2;
+    margin-bottom: 2rem;
+  }
+  .main__about__reward__pledge {
+    margin-left: auto;
+  }
+  .main__about__reward__button {
+    max-width: 160px;
+    padding: 0.8rem 2rem 1rem;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+/* ==========
+    Media 
+========== */
+@media (min-width: 800px) {
+  .main__header {
+    padding: 3rem;
+  }
+  .main__info {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+  }
+  .main__info__card {
+    grid-column: span 1;
+    border-right: 1px solid lightgray;
+    padding: 0;
+    margin-left: 3rem;
+  }
+  .main__info__card:first-child {
+    margin-left: 0;
+  }
+  .main__info__card:nth-child(3) {
+    border-right: none;
+  }
+  .main__info__card::before {
+    content: none;
+  }
+  .main__info__progress {
+    grid-column: span 3;
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

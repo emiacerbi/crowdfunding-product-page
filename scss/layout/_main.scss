@@ -12,6 +12,8 @@
         border-radius: .5rem;
         padding: 3rem 1.5rem 2rem;
 
+        max-width: 730px;
+        margin: 0 auto;
         margin-top: -5.5rem;
 
         position: relative;
@@ -37,7 +39,7 @@
         &__flex {
             display: flex;
             align-items: center;
-            gap: .5rem;
+            justify-content: space-between;
             margin-top: 1.5rem;
         }
 
@@ -45,7 +47,8 @@
             background-color: var(--moderate-cyan);
             border: none;
             padding: .8rem 2.4rem 1rem;
-            // width: 100%;
+            width: min(77.5%, 200px);
+            
             border-radius: 2rem;
 
             cursor: pointer;
@@ -56,15 +59,23 @@
         }
         
         &__bookmark {
+
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            &:hover path {
-                fill: white;
+            &:hover {
+                svg path {
+                    fill: lightgray;
+                }
+
+                svg circle {
+                    fill: #6e6e6e;
+                }
+
             }
 
-            &:hover circle {
-                fill: var(--dark-cyan)
-            }
         }
     }
 
@@ -74,11 +85,11 @@
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         border-radius: .5rem;
         padding: 1rem 2rem 3rem;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
+
+        max-width: 730px;
+
+        
 
         &__card {
 
@@ -122,8 +133,11 @@
 
     &__about {
 
+        max-width: 730px;
         border-radius: .5rem;
         margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
         background-color: white;
         padding: 2rem 1.5rem;
@@ -175,7 +189,129 @@
         .out {
             opacity: .5;
         }
-
     }
+}
 
+
+
+
+@media (min-width: 500px) {
+
+    .main {
+
+        &__header {
+
+            
+            &__title {
+                max-width: 100%;
+            }
+
+            &__bookmark {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #f4f4f4;
+                border-radius: 2rem;
+
+                &::after {
+                    content: 'Bookmark';
+                    width: 120px;
+                    height: 100%;
+                    padding: 1rem;
+                    padding-left: 0;
+                    
+                    z-index: 1;
+                }
+            }
+        }
+
+        &__info {
+            padding: 3rem;
+        }
+
+        &__about {
+
+            padding: 3.125rem 3rem;
+
+            &__text {
+                margin-top: 2rem;
+            }
+
+            &__reward {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 3rem 2rem;
+                
+
+                &__text {
+                    grid-column: span 2;
+                    margin-bottom: 2rem;
+                }
+
+                &__pledge {
+                    margin-left: auto;
+                }
+
+                &__button {
+                    max-width: 160px;
+                    padding: 0.8rem 2rem 1rem;
+                    margin-top: 0;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+/* ==========
+    Media 
+========== */
+
+@media (min-width: 800px) {
+
+    .main {
+
+        &__header {
+            padding: 3rem;
+        }
+
+        &__info {
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding: 3rem;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            text-align: left;
+
+            &__card {
+                grid-column: span 1;
+
+                border-right: 1px solid lightgray;
+                padding: 0;
+
+                margin-left: 3rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:nth-child(3) {
+                    border-right: none;
+                }
+
+                &::before {
+                    content: none;
+                }
+            }
+
+            &__progress {
+                grid-column: span 3;
+                margin-top: 2rem;
+            }
+        }
+    }
 }

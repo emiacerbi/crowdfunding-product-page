@@ -7,15 +7,19 @@
     background-image: url(/images/image-hero-mobile.jpg);
     background-size: contain;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 2rem 1.5rem;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 730px;
+        margin: 0 auto;
+    }
 
     &__ham {
         cursor: pointer;
     }
-
     
 }
 
