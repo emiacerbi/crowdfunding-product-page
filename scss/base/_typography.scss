@@ -46,5 +46,51 @@ body {
             }
         }
     }
+
+    &__about {
+
+        &__title {
+            font-size: 1.25rem;
+        }
+
+        &__text {
+            color: var(--dark-gray);
+            font-size: .87rem;
+            line-height: 1.6;
+        }
+
+        &__reward {
+
+            font-size: .9rem;
+            
+            &__title {
+                font-size: .9rem;
+            }
+
+            &__pledge {
+                color: var(--moderate-cyan);
+                font-weight: 500;
+            }
+            
+            &__text {
+                color: var(--dark-gray);
+            }
+
+            &__num {
+                font-size: 2rem;
+                font-weight: 700;
+                
+            }
+
+            &__span {
+                color: var(--dark-gray);
+                font-size: .85rem;
+            }
+
+            &__button {
+                color: white;
+            }
+        }
+    }
 }
 
