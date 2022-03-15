@@ -1,0 +1,50 @@
+/* ==========
+    Typography 
+========== */
+
+body {
+    font-family: var(--ff-main);
+}
+
+/* ==========
+    Main
+========== */
+
+.main {
+
+    &__header {
+        
+        &__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        &__text {
+            font-size: .9rem;
+            color: var(--dark-gray);
+        }
+
+        &__button {
+            color: white;
+            font-weight: 500;
+        }
+
+    }
+
+    &__info {
+
+        &__card {
+            &__num {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            &__span {
+                color: var(--dark-gray);
+                font-size: .85rem;
+            }
+        }
+    }
+}
+
