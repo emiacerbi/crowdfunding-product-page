@@ -6,6 +6,39 @@ body {
     font-family: var(--ff-main);
 }
 
+
+.header {
+
+    &__menu {
+        &__link {
+            color: var(--black);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__container {
+
+        &__nav {
+
+            &__ul {
+                color: white;
+                font-weight: 400;
+
+                &__li {
+
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* ==========
     Main
 ========== */
@@ -38,6 +71,7 @@ body {
             }
 
         }
+
 
     }
 
@@ -102,6 +136,45 @@ body {
         }
     }
 }
+
+
+/* ==========
+    Components
+========== */
+
+.main {
+
+    &__project {
+        &__label {
+
+            &__title {
+                font-size: .9rem;
+            }
+
+            &__pledge {
+                color: var(--moderate-cyan);
+                font-weight: 500;
+                font-size: .9rem;;
+            }
+
+            &__text {
+                font-size: .9rem;
+                color: var(--dark-gray);
+            }
+
+            &__num {
+                font-weight: 700;
+            }
+
+            &__span {
+                color: var(--dark-gray);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
 
 
 @media (min-width: 500px) {

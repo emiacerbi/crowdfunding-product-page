@@ -87,6 +87,23 @@ body {
   font-family: var(--ff-main);
 }
 
+.header__menu__link {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.header__container__nav__ul {
+  color: white;
+  font-weight: 400;
+}
+.header__container__nav__ul__li {
+  cursor: pointer;
+}
+.header__container__nav__ul__li:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ==========
     Main
 ========== */
@@ -148,6 +165,29 @@ body {
   color: white;
 }
 
+/* ==========
+    Components
+========== */
+.main__project__label__title {
+  font-size: 0.9rem;
+}
+.main__project__label__pledge {
+  color: var(--moderate-cyan);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.main__project__label__text {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+.main__project__label__num {
+  font-weight: 700;
+}
+.main__project__label__span {
+  color: var(--dark-gray);
+  font-weight: 400;
+}
+
 @media (min-width: 500px) {
   .main__header__title {
     font-size: 1.75rem;
@@ -174,8 +214,10 @@ body {
 .header {
   height: 300px;
   background-image: url(/images/image-hero-mobile.jpg);
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 2rem 1.5rem;
+  position: relative;
 }
 .header__container {
   display: flex;
@@ -184,10 +226,64 @@ body {
   max-width: 730px;
   margin: 0 auto;
 }
+.header__container__nav {
+  display: none;
+}
 .header__ham {
   cursor: pointer;
 }
+.header__menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -500px;
+  display: flex;
+  flex-direction: column;
+  width: 87.5%;
+  background-color: white;
+  border-radius: 0.5rem;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 40px 100px;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+}
+.header__menu__link {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.493);
+  padding: 1.5rem;
+  transition: 0.2s ease-in-out;
+}
+.header__menu__link:hover {
+  background-color: rgba(211, 211, 211, 0.692);
+}
 
+@media (min-width: 500px) {
+  .header {
+    height: 400px;
+    background-image: url(/images/image-hero-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .header__container__nav {
+    display: flex;
+  }
+  .header__container__nav__ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__container__nav__ul__li {
+    padding: 0;
+  }
+  .header__ham {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+}
 /* ==========
     Main 
 ========== */
@@ -419,6 +515,34 @@ body {
     grid-column: span 3;
     margin-top: 2rem;
   }
+}
+.main__project {
+  border-radius: 0.5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  background-color: white;
+  padding: 1.5rem;
+}
+.main__project__card {
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  border: 1px solid lightgray;
+  padding: 1rem;
+}
+.main__project__label {
+  display: grid;
+  grid-template-columns: 10% 1fr;
+}
+.main__project__label__title {
+  grid-column: 2/3;
+}
+.main__project__label__pledge {
+  grid-column: 2/3;
+}
+.main__project__label__text {
+  grid-column: span 2;
+}
+.main__project__label__span {
+  margin-left: 0.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */

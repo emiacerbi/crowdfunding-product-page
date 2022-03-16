@@ -1,0 +1,46 @@
+.main {
+
+    &__project {
+
+        border-radius: .5rem;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        background-color: white;
+        padding: 1.5rem;
+        
+        &__card {
+            // background-color: lightblue;
+            border-radius: .5rem;
+            margin-top: 1.5rem;
+            border: 1px solid lightgray;
+            padding: 1rem;
+
+        }
+        
+        &__label {
+            display: grid;
+            grid-template-columns: 10% 1fr;
+            
+
+            &__title {
+                grid-column: 2 / 3;
+            }
+            
+            &__pledge {
+                grid-column: 2 / 3;
+            }
+
+            &__text {
+                grid-column: span 2;
+            }
+
+            &__span {
+                margin-left: .25rem;
+            }
+
+            #bamboo {
+                
+            }
+
+        }
+    }
+}

@@ -5,9 +5,12 @@
 .header {
     height: 300px;
     background-image: url(/images/image-hero-mobile.jpg);
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     padding: 2rem 1.5rem;
+
+    position: relative;
     
     &__container {
         display: flex;
@@ -15,12 +18,78 @@
         align-items: flex-start;
         max-width: 730px;
         margin: 0 auto;
+
+        &__nav {
+            display: none;
+        }
     }
 
     &__ham {
         cursor: pointer;
     }
+
+    &__menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -500px;
+        display: flex;
+        flex-direction: column;
+        width: 87.5%;
+        background-color: white;
+        border-radius: .5rem;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 40px 100px;
+        transition: .2s ease-in-out;
+        overflow: hidden;
+        
+        &__link {
+            text-decoration: none;    
+            border-bottom: 1px solid rgba(211, 211, 211, 0.493);
+            padding: 1.5rem;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                background-color: rgba(211, 211, 211, 0.692);
+            }
+        } 
+    }
     
 }
 
+@media (min-width: 500px) {
+    .header {
+        height: 400px;
+        background-image: url(/images/image-hero-desktop.jpg);
+        background-position: center;
+        background-size: cover;
+        // background-repeat: no-repeat;
+
+        &__container {
+            &__nav {
+                display: flex;
+                
+                &__ul {
+                    display: flex;
+                    gap: 2rem;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    &__li {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+        
+        &__ham {
+            display: none;
+        }
+
+        &__menu {
+            display: none;
+        }
+    }
+}
 
