@@ -7,16 +7,13 @@
         left: 50%;
         transform: scale(0);
         z-index: 2;
-        width: 325px;
+        min-width: 325px;
         transition: .2s ease-in-out;
         transition-property: top;
         border-radius: .5rem;
         background-color: white;
         padding: 1.5rem;
-
-
         box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 1500px;
-
         
         .flex {
             display: flex;
@@ -31,6 +28,7 @@
             display: inline;
             margin-left: auto;
             padding-top: .3rem;
+            cursor: pointer;
         }
         
         &__text {
@@ -41,6 +39,10 @@
             border-radius: .5rem;
             margin-top: 1.5rem;
             outline: 1px solid lightgray;
+
+            max-width: 630px;
+            transition: outline .1s ease-in-out;
+
             
             &.out {
                 opacity: .5;
@@ -55,14 +57,89 @@
             &:hover {
                 outline: 2px solid var(--moderate-cyan)
             }
+
+            // Should only show when active
+            &__acc {
+                padding: 1.6rem 1.5rem 1.5rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            
+                text-align: center;
+                border-top: 1px solid lightgray;
+                cursor: pointer;
+                display: none;
+
+                
+                &.active {
+                    display: grid;
+                }
+            
+                &__text {
+                    grid-column: span 2;
+                    margin-bottom: 1rem;
+                    color: var(--dark-gray);
+                    font-size: .9rem;
+                }
+            
+                &__input {
+                    border-radius: 2rem;
+                    border: none;
+                    outline: 1px solid lightgray;
+                    padding: .8rem 0 .95rem;
+                    width: 100px;
+                    -webkit-appearance: none;
+                    -moz-appearance: textfield;
+                    cursor: pointer;
+                    text-align: center;
+                    font-weight: 500;
+            
+                    background-image: url(/images/dollar-sign-svgrepo-com.svg);
+                    background-repeat: no-repeat;
+                    background-size: 15%;
+                    background-position: 15% 50% ;
+
+                    grid-column: span 1;
+
+
+                    
+                    &:focus,
+                    &:hover {
+                
+                        outline: 2px solid var(--moderate-cyan);
+                    }
+                    
+                    
+                }
+                
+                &__cont {
+                    width: 125px;
+                    border-radius: 2rem;
+                    border: none;
+                    padding: .8rem 0 .95rem;
+                    background-color: var(--moderate-cyan);
+                    color: white;
+                    cursor: pointer;
+                    
+                    margin-left: .5rem;
+                    grid-column: span 1;
+
+                    &:hover {
+                        background-color: var(--dark-cyan);
+                    }
+                }
+            
+            }
+            
         }
         
+
         &__label {
             cursor: pointer;
             padding: 1.75rem 1.5rem 1rem;
             display: grid;
             grid-template-columns: auto 1fr;
-
+            
+            
             &.out {
                 cursor: help;
             }
@@ -89,12 +166,12 @@
                 margin-top: 1rem;
                 margin-bottom: 1rem;
             }
-
-
+            
+            
             &__span {
                 margin-left: .25rem;
             }
-
+            
             
             input[type='radio'] {
                 
@@ -106,19 +183,19 @@
                 appearance: none;
                 background-color: #fff;
                 margin: 0;
-
+                
                 font: inherit;
                 color: currentColor;
                 width: 1.25rem;
                 height: 1.25rem;
                 border: 1px solid lightgray;
                 border-radius: 50%;
-
+                
                 display: grid;
                 place-content: center;
                 
             }
-
+            
             input[type='radio']::before {
                 content: "";
                 width: .75rem;
@@ -128,11 +205,44 @@
                 transition: .1s transform ease-in-out;
                 box-shadow: inset 1rem 1rem var(--moderate-cyan);
             }
-
+            
             input[type='radio']:checked::before {
                 transform: scale(1);
             }
+            
+        }
+        
+    }
 
+}
+
+@media (min-width: 1000px) {
+    .main {
+
+        &__project {
+
+            &__card {
+
+                &__acc {
+                    grid-template-columns: 1fr 8rem 8rem;
+                    align-items: center;
+                    justify-items: flex-start;
+
+                    &__text {
+                        grid-column: span 1;
+                        margin: 0;
+                    }
+                    
+                    &__input {
+                        grid-column: span 1;
+                        justify-self: flex-end;
+                    }
+                    
+                    &__cont {
+                        grid-column: span 1;
+                    }
+                }
+            }
         }
     }
 }
