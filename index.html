@@ -16,7 +16,7 @@
 
 </head>
 <body>
-
+<div class="global-shadow"></div>
 <header class="header">
 
   <div class="header__container">
@@ -63,13 +63,20 @@
 
   <!-- Back this project component (Position: Absolute) -->
   <div class="main__project">
-    <h2 class="main__project__title"></h2>
-    <p class="main__project__text"></p>
+    <div class="flex">
+      <h2 class="main__project__title">Back this project</h2>
+      <img src="/images/icon-close-modal.svg" alt="" class="main__project__cross">
+    </div>
+    <p class="main__project__text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
     <div class="main__project__card">
       <label class="main__project__label" for="no-reward">
-        <input type="radio" id="no-reward" name="pledge">
-        <h2 class="main__project__label__title">Pledge with no reward</h2>
+
+        <div class="main__project__label__grid">
+          <input type="radio" id="no-reward" name="pledge">
+          <h2 class="main__project__label__title">Pledge with no reward</h2>
+        </div>
+
         <p class="main__project__label__text"> Choose to support us without a reward if you simply believe in our project. As a backer, 
           you will be signed up to receive product updates via email.</p>
       </label>
@@ -77,9 +84,11 @@
 
     <div class="main__project__card">
       <label class="main__project__label" for="bamboo">
-        <input type="radio" id="bamboo" name="pledge">
-        <h2 class="main__project__label__title">Bamboo Stand</h2>
-        <p class="main__project__label__pledge">Pledge $25 or more</p>
+        <div class="main__project__label__grid">
+          <input type="radio" id="bamboo" name="pledge">
+          <h2 class="main__project__label__title">Bamboo Stand</h2>
+          <p class="main__project__label__pledge">Pledge $25 or more</p>
+        </div>
         <p class="main__project__label__text">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
           you’ll be added to a special Backer member list.</p>
         <p class="main__project__label__num">101</p>
@@ -89,21 +98,39 @@
 
     <div class="main__project__card">
       <label class="main__project__label" for="black">
-        <input type="radio" id="black" name="pledge">
-        <h2 class="main__project__label__title">Black Edition Stand</h2>
-        <p class="main__project__label__pledge">Pledge %75 or more</p>
-        <p class="main__project__label__text">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-          to our Backer member list. Shipping is included.</p>
+
+        <div class="main__project__label__grid">
+          <input type="radio" id="black" name="pledge">
+          <h2 class="main__project__label__title">Black Edition Stand</h2>
+          <p class="main__project__label__pledge">Pledge %75 or more</p>
+        </div>
+
+        <p class="main__project__label__text"> You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+          member list. Shipping is included.</p>
         <p class="main__project__label__num">64</p>
+        <span class="main__project__label__span">left</span>
+      </label>
+    </div>
+
+    <div class="main__project__card out">
+      <label class="main__project__label out" for="black">
+
+        <div class="main__project__label__grid">
+          <input type="radio" id="black" name="pledge">
+          <h2 class="main__project__label__title">Mahogany Special Edition</h2>
+          <p class="main__project__label__pledge">Pledge $200 or more</p>
+        </div>
+
+        <p class="main__project__label__text"> 
+          You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+          to our Backer member list. Shipping is included.
+          0 left</p>
+        <p class="main__project__label__num">0</p>
         <span class="main__project__label__span">left</span>
       </label>
     </div>
     
   </div>
-
-    <!-- <label class="main__info__project__label" for="3">
-      <input type="radio" id="3" name="pledge">
-    </label> -->
 
   <!-- Main info -->
   <div class="main__info">

@@ -40,14 +40,14 @@
         border-radius: .5rem;
         z-index: 1;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 40px 100px;
-        transition: .2s ease-in-out;
+        transition: top .1s ease-in-out;
         overflow: hidden;
         
         &__link {
             text-decoration: none;    
             border-bottom: 1px solid rgba(211, 211, 211, 0.493);
             padding: 1.5rem;
-            transition: .2s ease-in-out;
+            transition: background-color .1s ease-in-out;
 
             &:hover {
                 background-color: rgba(211, 211, 211, 0.692);
