@@ -9,11 +9,11 @@
         z-index: 2;
         min-width: 325px;
         transition: .2s ease-in-out;
-        transition-property: top;
+        
         border-radius: .5rem;
         background-color: white;
         padding: 1.5rem;
-        box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 1500px;
+        // box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 1500px;
         
         .flex {
             display: flex;
@@ -93,7 +93,7 @@
                     text-align: center;
                     font-weight: 500;
             
-                    background-image: url(/images/dollar-sign-svgrepo-com.svg);
+                    background-image: url(../images/dollar-sign-svgrepo-com.svg);
                     background-repeat: no-repeat;
                     background-size: 15%;
                     background-position: 15% 50% ;

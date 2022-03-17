@@ -17,11 +17,21 @@
 </head>
 <body>
 <div class="global-shadow"></div>
+
+<div class="thank-card">
+  <img src="./images/icon-check.svg" alt="checkmark" class="thank-card__check">
+  <h2 class="thank-card__title">Thanks for your support!</h2>
+  <p class="thank-card__text">
+    Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.
+  </p>
+  <button class="thank-card__button">Got it!</button>
+</div>
+
 <header class="header">
 
   <div class="header__container">
-    <img src="/images/logo.svg" alt="" class="header__logo">
-    <img src="/images/icon-hamburger.svg" alt="" class="header__ham">
+    <img src="./images/logo.svg" alt="crowdfund logo" class="header__logo">
+    <img src="./images/icon-hamburger.svg" alt="nav icon" class="header__ham">
     <nav class="header__container__nav">
       <ul class="header__container__nav__ul">
         <li class="header__container__nav__ul__li">About</li>
@@ -56,6 +66,7 @@
             <circle fill="#2F2F2F" cx="28" cy="28" r="28"/>
             <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/>
           </g>
+          <p class="main__header__bookmark__svg__content">Bookmark</p>
         </svg>
       </div>
     </div>
@@ -65,7 +76,7 @@
   <div class="main__project">
     <div class="flex">
       <h2 class="main__project__title">Back this project</h2>
-      <img src="/images/icon-close-modal.svg" alt="" class="main__project__cross">
+      <img src="./images/icon-close-modal.svg" alt="cross" class="main__project__cross">
     </div>
     <p class="main__project__text">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
 
@@ -74,7 +85,7 @@
       <label class="main__project__label" for="no-reward">
 
         <div class="main__project__label__grid">
-          <input type="radio" id="no-reward" name="pledge" value="no-reward">
+          <input type="radio" id="no-reward" name="pledge" value="0">
           <h2 class="main__project__label__title">Pledge with no reward</h2>
         </div>
 
@@ -86,9 +97,9 @@
       </label>
 
       <!-- No Reward Accordion -->
-      <div class="main__project__card__acc">
+      <div class="main__project__card__acc active">
         <p class="main__project__card__acc__text">Enter your pledge</p>
-        <input type="number" class="main__project__card__acc__input">
+        <input type="number" class="main__project__card__acc__input" placeholder="10">
         <button class="main__project__card__acc__cont">Continue</button>
       </div>
     </div>
@@ -97,7 +108,7 @@
     <div class="main__project__card">
       <label class="main__project__label" for="bamboo">
         <div class="main__project__label__grid">
-          <input type="radio" id="bamboo" name="pledge" value="bamboo">
+          <input type="radio" id="bamboo" name="pledge" value="1" >
           <h2 class="main__project__label__title">Bamboo Stand</h2>
           <p class="main__project__label__pledge">Pledge $25 or more</p>
         </div>
@@ -113,7 +124,7 @@
       <!-- Bamboo Accordion -->
       <div class="main__project__card__acc">
         <p class="main__project__card__acc__text">Enter your pledge</p>
-        <input type="number" class="main__project__card__acc__input">
+        <input type="number" class="main__project__card__acc__input" placeholder="25">
         <button class="main__project__card__acc__cont">Continue</button>
       </div>
       
@@ -124,9 +135,9 @@
 
       <label class="main__project__label" for="black">
         <div class="main__project__label__grid">
-          <input type="radio" id="black" name="pledge" value="black">
+          <input type="radio" id="black" name="pledge" value="2">
           <h2 class="main__project__label__title">Black Edition Stand</h2>
-          <p class="main__project__label__pledge">Pledge %75 or more</p>
+          <p class="main__project__label__pledge">Pledge $75 or more</p>
         </div>
 
         <p class="main__project__label__text">
@@ -140,7 +151,7 @@
       <!-- Black Accordion -->
       <div class="main__project__card__acc">
         <p class="main__project__card__acc__text">Enter your pledge</p>
-        <input type="number" class="main__project__card__acc__input">
+        <input type="number" class="main__project__card__acc__input" placeholder="75">
         <button class="main__project__card__acc__cont">Continue</button>
       </div>
 
@@ -221,7 +232,7 @@
         <span class="main__about__reward__span">left</span>
       </div>
 
-      <button class="main__about__reward__button">Select Reward</button>
+      <button class="main__about__reward__button" id="1">Select Reward</button>
 
     </div>
 
@@ -239,7 +250,7 @@
         <span class="main__about__reward__span">left</span>
       </div>
 
-      <button class="main__about__reward__button">Select Reward</button>
+      <button class="main__about__reward__button" id="2">Select Reward</button>
 
     </div>
 

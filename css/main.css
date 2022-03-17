@@ -195,6 +195,17 @@ body {
   font-weight: 400;
 }
 
+.thank-card__title {
+  font-size: 1.25rem;
+}
+.thank-card__text {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+/* ==========
+    Typography
+========== */
 @media (min-width: 500px) {
   .main__header__title {
     font-size: 1.75rem;
@@ -220,7 +231,7 @@ body {
 ========== */
 .header {
   height: 300px;
-  background-image: url(/images/image-hero-mobile.jpg);
+  background-image: url(../images/image-hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem 1.5rem;
@@ -267,7 +278,7 @@ body {
 @media (min-width: 500px) {
   .header {
     height: 400px;
-    background-image: url(/images/image-hero-desktop.jpg);
+    background-image: url(../images/image-hero-desktop.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -294,6 +305,19 @@ body {
 /* ==========
     Main 
 ========== */
+.global-shadow {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2 ease-in-out;
+  width: 1px;
+  height: 1px;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 0px 3500px;
+}
+
 .main {
   padding: 2rem 1.5rem;
   background-color: #fafafa;
@@ -310,7 +334,7 @@ body {
   text-align: center;
 }
 .main__header::after {
-  content: url(/images/logo-mastercraft.svg);
+  content: url(../images/logo-mastercraft.svg);
   position: absolute;
   top: -10%;
   left: 50%;
@@ -351,6 +375,19 @@ body {
 }
 .main__header__bookmark:hover svg circle {
   fill: #6e6e6e;
+}
+.main__header__bookmark.active {
+  color: var(--dark-cyan);
+  font-weight: 600;
+}
+.main__header__bookmark.active svg path {
+  fill: lightgray;
+}
+.main__header__bookmark.active svg circle {
+  fill: var(--dark-cyan);
+}
+.main__header__bookmark__svg__content {
+  display: none;
 }
 .main__info {
   margin-top: 2rem;
@@ -452,13 +489,11 @@ body {
     background-color: #f4f4f4;
     border-radius: 2rem;
   }
-  .main__header__bookmark::after {
-    content: "Bookmark";
-    width: 120px;
-    height: 100%;
-    padding: 1rem;
-    padding-left: 0;
-    z-index: 1;
+  .main__header__bookmark__svg__content {
+    padding-left: 0.75rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.25rem;
+    display: block;
   }
   .main__info {
     padding: 3rem;
@@ -531,11 +566,9 @@ body {
   z-index: 2;
   min-width: 325px;
   transition: 0.2s ease-in-out;
-  transition-property: top;
   border-radius: 0.5rem;
   background-color: white;
   padding: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 100px 1500px;
 }
 .main__project .flex {
   display: flex;
@@ -600,7 +633,7 @@ body {
   cursor: pointer;
   text-align: center;
   font-weight: 500;
-  background-image: url(/images/dollar-sign-svgrepo-com.svg);
+  background-image: url(../images/dollar-sign-svgrepo-com.svg);
   background-repeat: no-repeat;
   background-size: 15%;
   background-position: 15% 50%;
@@ -700,6 +733,44 @@ body {
   .main__project__card__acc__cont {
     grid-column: span 1;
   }
+}
+.thank-card {
+  z-index: 2;
+  position: absolute;
+  max-width: 325px;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: scale 0.3s ease-in-out;
+  scale: 0;
+  text-align: center;
+}
+.thank-card__check {
+  margin: 0 auto;
+}
+.thank-card__title {
+  margin-top: 1.25rem;
+}
+.thank-card__text {
+  margin-top: 1.25rem;
+}
+.thank-card__button {
+  width: 125px;
+  border-radius: 2rem;
+  border: none;
+  padding: 0.8rem 0 0.95rem;
+  background-color: var(--moderate-cyan);
+  color: white;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  grid-column: span 1;
+  margin-top: 2rem;
+}
+.thank-card__button:hover {
+  background-color: var(--dark-cyan);
 }
 
 /*# sourceMappingURL=main.css.map */
