@@ -123,7 +123,7 @@ const getBackers = () => {
 }
 
 const displayThanks = () => {
-    thankCard.style.scale = "1"
+    thankCard.style.transform = "translate(-50%, -50%) scale(1)"
     globalShadow.style.opacity = "0.7"
 }
 
@@ -188,7 +188,7 @@ for (let btn of selectButton) {
 }
 
 const closeThanksCard = () => {
-    thankCard.style.scale = '0'
+    thankCard.style.transform = "translate(-50%, -50%) scale(0)"
     globalShadow.style.opacity = '0'
 }
 
